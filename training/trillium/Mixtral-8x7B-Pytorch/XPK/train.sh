@@ -51,9 +51,9 @@ huggingface-cli login --token=${HF_TOKEN}
 python3 /workspace/transformers/examples/pytorch/language-modeling/run_clm.py \
 --dataset_name=wikitext --dataset_config_name=wikitext-103-raw-v1 \
 --per_device_train_batch_size=${GLOBAL_BATCH_SIZE} --do_train --output_dir=test-clm \
---overwrite_output_dir --config_name=/app/config.json \
+--overwrite_output_dir --config_name=./config.json \
 --cache_dir=cache --tokenizer_name=mistralai/Mixtral-8x7B-v0.1 \
 --block_size=${SEQUENCE_LENGTH} --optim=adafactor --save_strategy=no \
 --logging_strategy=no --fsdp="full_shard" \
---fsdp_config=/app/fsdp_config.json --torch_dtype=bfloat16 \
+--fsdp_config=./fsdp_config.json --torch_dtype=bfloat16 \
 --dataloader_drop_last=yes --max_steps=${MAX_STEP} --gmm --flash_attention
