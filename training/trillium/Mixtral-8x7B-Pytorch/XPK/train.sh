@@ -1,9 +1,11 @@
 #!/bin/bash
 
-source /app/env.sh
+# source /app/env.sh
+source env.sh
 
 # Extract the number after '-' in TPU_TYPE
 TPU_NUM=$(echo "$TPU_TYPE" | grep -oP '(?<=-)\d+')
+# echo $TPU_NUM
 
 # Calculate GLOBAL_BATCH_SIZE
 GLOBAL_BATCH_SIZE=$(( TPU_NUM * BATCH_PER_DEVICE * NUM_SLICE ))
