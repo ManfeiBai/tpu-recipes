@@ -39,7 +39,8 @@ export PROFILE_EPOCH=0
 export PROFILE_STEP=3
 export PROFILE_DURATION_MS=100000
 export PROFILE_LOGDIR=${PROFILE_LOG_DIR}
-export XLA_PERSISTENT_CACHE_PATH=/app/xla_cache/
+mkdir xla_cache/
+export XLA_PERSISTENT_CACHE_PATH= /workspace/xla_cache/ # /app/xla_cache/
 export TPU_LIBRARY_PATH=/workspace/_libtpu.so
 export NUM_TPU_SLICE=1 # ${NUM_SLICE}
 echo "NUM_TPU_SLICE=$NUM_TPU_SLICE"
