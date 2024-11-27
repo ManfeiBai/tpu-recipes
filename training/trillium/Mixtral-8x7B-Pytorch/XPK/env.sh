@@ -14,4 +14,4 @@ export MAX_STEP=50
 export WORKLOAD_NAME=${USER}-xpk-${TPU_TYPE}-nov261457pm # Your workload name. Need to update for different run.
 export BASE_DOCKER_IMAGE=us-central1-docker.pkg.dev/deeplearning-images/reproducibility/pytorch-tpu-mixtral:v1
 export PROFILE_LOG_DIR=gs://manfei_bucket_automated # GCS bucket to store profile in form of gs://...
-export HF_TOKEN=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 # Add your own Hugging face token to download model
+export HF_TOKEN=hf_ABC # Add your own Hugging face token to download model
